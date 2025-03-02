@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Pendu</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h1>Jeu du Pendu</h1>
+    <button id="demarrer" onclick="demarrer()">Démarrer</button>
+    <div id="jeu" style="display: none;">
+        <div id="pendu">
+            <div id="potence-base"></div>
+            <div id="potence-verticale"></div>
+            <div id="potence-horizontale"></div>
+            <div id="potence-verticale-small"></div>
+            <div id="tete" class="pendu-partie cache"></div>
+            <div id="corps" class="pendu-partie cache"></div>
+            <div id="bras-gauche" class="pendu-partie cache"></div>
+            <div id="bras-droit" class="pendu-partie cache"></div>
+            <div id="jambe-gauche" class="pendu-partie cache"></div>
+            <div id="jambe-droite" class="pendu-partie cache"></div>
+        </div>
+        <div id="mot-affiche"></div>
+        <div id="clavier"></div>
+        <div id="message"></div>
+        <div id="erreurs-restantes">Erreurs restantes : 6</div>
+        <div id="volumeControl">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="100" value="50">
+        </div>
+        <div class="centered">
+            <button id="rejouer" onclick="rejouer()">Rejouer</button>
+        </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
