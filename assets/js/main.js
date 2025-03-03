@@ -15,7 +15,7 @@ const errorsLeft = document.querySelector('#erreurs-restantes');
 async function choisirMot() {
     const response = await fetch('https://trouve-mot.fr/api/random');
     const data = await response.json();
-    return data[0].name.toLowerCase(); // Convertir en minuscules
+    return data[0].name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Convertir en minuscules et enlève tout accent du mot
 }
 
 // Initialisation du jeu
